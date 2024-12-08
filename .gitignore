@@ -20,3 +20,24 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary and cache files
+.cache/
+.temp/
+
+# Husky-generated hooks
+.husky/_/
+
+# Prettier and ESLint caches
+.eslintcache
+.prettiercache
