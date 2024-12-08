@@ -7,7 +7,9 @@
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "prepare": "husky install",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "watch": "vitest --watch"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +19,8 @@
     "eslint": "^9.16.0",
     "globals": "^15.13.0",
     "prettier": "^3.4.2",
-    "tailwindcss": "^3.4.12"
+    "tailwindcss": "^3.4.12",
+    "vitest": "^2.1.8"
   },
   "lint-staged": {
     "*.js": [
