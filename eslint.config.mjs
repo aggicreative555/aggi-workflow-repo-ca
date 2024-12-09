@@ -16,6 +16,7 @@ export default [
         process: true,
       },
     },
+    ...pluginJs.configs.recommended,
   },
-  pluginJs.configs.recommended,
+
 ];
