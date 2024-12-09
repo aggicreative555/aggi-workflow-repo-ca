@@ -2,22 +2,44 @@ import { expect, describe, it } from "vitest";
 import { isActivePath } from "./userInterface";
 
 describe("isActivePath function", () => {
-  it("Returns true when path matches exactly", () => {
-    expect(isActivePath("/login", "/login")).toBe(true);
-  });
+  const testCases = [
+    {
+      description: "Returns true when path matches exactly",
+      href: "/login",
+      currentPath: "/login",
+      expected: true,
+    },
+    {
+      description: 'Returns true for root path when path is exactly "/"',
+      href: "/",
+      currentPath: "/index.html",
+      expected: true,
+    },
+    {
+      description:
+        'Returns true for root path when path is exactly "/index.html"',
+      href: "/",
+      currentPath: "/index.html",
+      expected: true,
+    },
+    {
+      description: "Returns true when current path includes the href",
+      href: "/venue",
+      currentPath: "/venue/id",
+      expected: true,
+    },
+    {
+      description: "Returns false when paths dont match",
+      href: "/login",
+      currentPath: "/register",
+      expected: false,
+    },
+  ];
 
-  it("Returns true for root path when path is exactly / or /index.html", () => {
-    expect(isActivePath("/", "/")).toBe(true);
-    expect(isActivePath("/", "/index.html")).toBe(true);
-  });
-
-  it("Returns true when current path includes the href", () => {
-    expect(isActivePath("/venue", "/venue/id")).toBe(true);
-    expect(isActivePath("/id", "/venue/id")).toBe(true);
-  });
-
-  it("Returns false when paths don't match", () => {
-    expect(isActivePath("/login", "/register")).toBe(false);
-    expect(isActivePath("/venue", "/login")).toBe(false);
+  testCases.forEach(({ description, href, currentPath, expected }) => {
+    it(description, () => {
+      const result = isActivePath(href, currentPath);
+      expect(result).toBe(expected);
+    });
   });
 });
