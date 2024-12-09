@@ -1,14 +1,5 @@
-import { describe, beforeAll, it, vi, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 import { getUsername } from "./storage";
-
-beforeAll(() => {
-  window.localStorage = {
-    getItem: vi.fn(),
-    setItem: vi.fn(),
-    removeItem: vi.fn(),
-    clear: vi.fn(),
-  };
-});
 
 describe("getUsername function", () => {
   it("Returns username value as an object from local storage.", () => {

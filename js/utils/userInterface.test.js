@@ -1,7 +1,7 @@
 import { expect, describe, it } from "vitest";
 import { isActivePath } from "./userInterface";
 
-describe("isActivePath", () => {
+describe("isActivePath function", () => {
   it("Returns true when path matches exactly", () => {
     expect(isActivePath("/login", "/login")).toBe(true);
   });
