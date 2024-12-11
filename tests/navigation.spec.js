@@ -3,7 +3,7 @@ const { test, expect } = require("@playwright/test");
 test.describe("Navigation functionality", () => {
   test.setTimeout(60000);
 
-  test.only("Navigates to the home page ", async ({ page }) => {
+  test("Navigates to the home page ", async ({ page }) => {
     await page.goto("http://localhost:5500/login");
 
     const homeLink = await page.locator("#homeLink");
@@ -23,9 +23,7 @@ test.describe("Navigation functionality", () => {
 
   test("Clicks the first venue", async ({ page }) => {
     await page.goto("http://localhost:5500/");
-    const firstVenue = page.locator("#venue-container", "a.venue-card").first();
-
-    await page.waitForSelector("#venue-container");
+    const firstVenue = page.locator("a.venue-card").first();
 
     await firstVenue.click();
 
@@ -39,7 +37,7 @@ test.describe("Navigation functionality", () => {
       "http://localhost:5500/venue/?id=3d100123-8dbf-4a81-bfb8-34631d076877",
     );
 
-    const heading = page.locator("/h1/");
+    const heading = page.locator("h1");
 
     await expect(heading).toContainText("Venue details");
   });
