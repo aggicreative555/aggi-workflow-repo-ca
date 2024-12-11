@@ -8,6 +8,11 @@ export function createMenu() {
 
   const createNavLink = (href, text) => {
     const isActive = isActivePath(href, currentPath) && text !== "Logo";
+    console.log({
+      currentPath,
+      href: "/login",
+      isActive: isActivePath("/login", currentPath),
+    });
     const activeClass = isActive
       ? "text-blue-300"
       : "text-white hover:text-blue-200";
