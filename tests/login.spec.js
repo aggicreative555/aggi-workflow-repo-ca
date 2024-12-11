@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test");
 
 test.describe("Login functionality", () => {
-  test.setTimeout(120000);
+  test.setTimeout(60000);
 
   test("User can successfully log in with valid credentials from environment variables", async ({
     page,
