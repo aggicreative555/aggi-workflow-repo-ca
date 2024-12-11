@@ -38,6 +38,12 @@ build/
 # Husky-generated hooks
 .husky/_/
 
-# Prettier and ESLint caches
+# Prettier, ESLint and Playwright caches
 .eslintcache
 .prettiercache
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/tests-examples/
+/test-results/
