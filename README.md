@@ -4,6 +4,8 @@ _Noroff Workflow Course Assignment_
 
 # Unit testing & E2E
 
+---
+
 ## Description:
 
 The goal of this project is to test important functions in this API app, by performing unit tests using **Vitest** and E2E tests using **Playwright**.
@@ -28,27 +30,27 @@ Before you begin, ensure you have the following installed on your system:
 
 - **git**: v2.43.0 or higher
 
----
-
 ## Installation :
 
-**Cloning the repo**:
+### Cloning the repo:
+
 Run this command:
 
 ```bash
 git clone https://github.com/aggicreative555/aggi-workflow-repo-ca.git
 ```
 
-**Installing dependencies**:
+### Installing dependencies:
+
 This project uses several dependencies for development and testing. Here is the list of all dependencies used:
 
-- Vite: Code compiler.
-- Eslint: Code linting
-- prettier: Code formatting
-- Playwright: E2E testing
-- tailwindcss: Styling
-- vitest: Unit testing
-- dotenv: Managing environment variables
+- **Vite**: Code compiler.
+- **Eslint**: Code linting
+- **Prettier**: Code formatting
+- **Playwright**: E2E testing
+- **Tailwindcss**: Styling
+- **Vitest**: Unit testing
+- **Dotenv**: Managing environment variables
 
 1. Run the following commands to install them:
 
@@ -62,7 +64,7 @@ npm install
 npm list
 ```
 
-**Environment variables**:
+### Environment variables:
 
 1. Create a .env file in the root directory:
 
@@ -78,13 +80,11 @@ TEST_USER = user1
 TEST_USER_PASS = password
 ```
 
-_Ensure your .env file is included in .gitignore to prevent exposing sensitive information._
-
----
+**Ensure your .env file is included in .gitignore to prevent exposing sensitive information.**
 
 ## Project Scripts :
 
-**Terminal commands**:
+### Terminal commands:
 
 1. Run the server:
 
@@ -122,11 +122,9 @@ npm playwright test
 npm run build
 ```
 
----
-
 ## Usage:
 
-**Run project**:
+### Run project:
 
 1. Run dev server:
 
@@ -146,7 +144,7 @@ npm run build
 npm run preview
 ```
 
-**Testing**:
+### Testing:
 
 1. Unit tests:
 
@@ -160,13 +158,13 @@ npm run test
 npx playwright test
 ```
 
-To run in browser(s):
+**To run in browser(s):**
 
 ```bash
 npm playwright test --headed
 ```
 
-To open playwright UI:
+**To open playwright UI:**
 
 ```bash
 npm playwright test --ui
@@ -182,7 +180,7 @@ npm run coverage
 npx playwright show-report
 ```
 
-**Development Workflow**
+### Development Workflow:
 
 This project uses **Husky** and **lint-staged** to ensure code quality before commits. These tools automatically run checks and format your code whenever you make a commit.
 
@@ -204,8 +202,6 @@ This project uses **Husky** and **lint-staged** to ensure code quality before co
 }
 ```
 
----
-
 ## Contributions Guidelines:
 
 1. To contribute, fork the repository.
@@ -219,8 +215,6 @@ git checkout -b fork/your-fork-name
 3. Commit your changes.
 
 4. Submit a PR for review.
-
----
 
 ### Acknowledgements:
 
