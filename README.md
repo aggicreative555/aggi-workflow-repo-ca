@@ -11,9 +11,13 @@ The goal of this project is to test important functions in this API app, by perf
 # Table of Contents
 
 - [Installation](#installation-)
+
 - [Project Scripts](#project-scripts-)
-- [Usage](#usage) -[Run Project](#run-project) -[Running Tests](#testing) -[Developement Workflow](#development-workflow)
+
+- [Usage](#usage)
+
 - [Contributing](#contributions-guidelines)
+
 - [Ackowledgements](#acknowledgements)
 
 ## Prerequisites :
