@@ -64,18 +64,49 @@ npm list
 
 ### Environment variables:
 
-**1. Create a .env file in the root directory:**
+**1. Copy the `.env.example` file and rename it to `.env`:**
+
+```bash
+cp .env.example .env
+```
+
+**2. OR create your own .env:**
 
 ```bash
 touch .env
 ```
 
-**2. Add the env variables:**
+**3. Add variables:**
 
 ```plaintext
-# .env file example
-TEST_USER = user1
-TEST_USER_PASS = password
+
+# .env.example
+
+# TEST user
+TEST_USER=test_user
+
+# TEST password
+TEST_PASSWORD=password
+
+# API Key for external service
+API_KEY=your-api-key-here
+
+# Port for the application to run on
+PORT=5500
+
+```
+
+**3.Add the env to your file:**
+
+```javascript
+require("dotenv").config();
+
+const user = process.env.TEST_USER;
+const password = process.env.TEST_PASSWORD;
+const apiKey = process.env.API_KEY;
+const port = process.env.PORT || 5500;
+
+console.log(user, password, apiKey, port);
 ```
 
 **Ensure your .env file is included in .gitignore to prevent exposing sensitive information.**
