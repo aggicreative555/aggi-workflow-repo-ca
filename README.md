@@ -1,7 +1,5 @@
 _Noroff Workflow Course Assignment_
 
----
-
 # Unit testing & E2E
 
 ---
@@ -17,8 +15,6 @@ The goal of this project is to test important functions in this API app, by perf
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Ackowledgements](#ackowledgements)
-
----
 
 ## Prerequisites :
 
