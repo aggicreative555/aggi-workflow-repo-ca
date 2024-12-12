@@ -1,4 +1,6 @@
-### Workflow repo for the CA
+_Noroff Workflow Course Assignment_
+
+---
 
 # Unit testing & E2E
 
